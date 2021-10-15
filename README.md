@@ -18,5 +18,5 @@ Kaggle Competition : https://www.kaggle.com/c/open-images-2019-object-detection/
 | Name                        | Chinese Name | Github Profile                          |
 |-----------------------------|--------------|-----------------------------------------|
 | Pruvost Kevin (Team Leader) | 潘凱文       | [Link](https://github.com/kevinpruvost) |
-| Carus                       | 屈颖钢       | [Link]()                                |
+| Carus                       | 屈颖钢       | [Link](https://github.com/Carusy)                                |
 | Renard Lucas                | 雷纳卢卡     | [Link](https://github.com/LightFox7)    |
