@@ -65,12 +65,64 @@ Then open the Visaul Studio Solution in `.\darknet\build\darknet\darknet.sln`.
 
 From now on, you'll have to build `darknet`.
 
-Like so:
+But to do so, you might need some corrections, but do try to build `darknet` directly, if everything is ok, then go on and try to use it.
 
+#### Using OpenCV, CUDA & CUDNN
 
+If Visual Studio has not already linked the environment varaibles to your `darkent` project, then follow these simple steps:
 
-## How to use it
+#### Step 1
+
+Go in the Project's properties.
+
+<img src="./Screenshots/1.png"/><br/><br/>
+
+#### Step 2
+
+Go in `Configuration Properties` -> `VC++ Directories` and modify `Include Directories` and `Library Directories` to add `$(Path)`. You can add it with the help of macros.
+
+<img src="./Screenshots/2.png"/><br/><br/>
+
+#### Step 3
+
+Then, go in `Build Customizations`.
+
+<img src="./Screenshots/3.png"/><br/><br/>
+
+#### Step 4
+
+And add your version of CUDA by clicking on `Find Existing...` and then by checking it.
+
+<img src="./Screenshots/4.png"/><br/><br/>
+
+#### Step 5
+
+Then you can finally build `darknet` without any errors ! 🥳
+
+<img src="./Screenshots/5.png"/><br/><br/>
+
+## How to use DarkNet with YoloV3
+
+You'll just have to use this command to launch the object detection on an image:
+
+```
+.\darknet.exe detect $CFG_FILE $WEIGHTS_FILE $IMAGE
+```
+
+<img src="./Screenshots/test1.png"/><br/><br/>
+
 
 ## Our configuration
 
-https://developer.nvidia.com/rdp/cudnn-archive
+As we are using the OpenImages dataset, the results are quite different.
+
+We are using the files contained in `./PreTrained_Config`.
+
+To use our configuration for the OpenImages project, just launch this command:
+
+```
+darknet detector test .\PreTrained_Config\openimages.data .\PreTrained_Config\yolov3-openimage.cfg .\PreTrained_Config\yolov3-openimages.weights $IMAGE
+```
+
+<img src="./Screenshots/test2.png"/><br/><br/>
+
