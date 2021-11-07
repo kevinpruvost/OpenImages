@@ -8,13 +8,47 @@
 
 ## Installation (on Windows)
 
+### How to add a path to the $PATH environment variable
+
+Check this tutorial first if you don't know how to add new codes to the global path 😄
+
+https://docs.microsoft.com/en-us/previous-versions/office/developer/sharepoint-2010/ee537574(v=office.14)
+
 ### CUDA
+
+Go on this link and install it with the given executable.
 
 https://developer.nvidia.com/cuda-10.0-download-archive
 
+> :warning: **Make sure to select an appropriate installation folder, we'll add it to the $PATH environment variable.**
+
+Paths to add:
+
+```
+...\NVIDIA GPU Computing Toolkit\CUDA\v11.4\bin
+```
+
+```
+...\NVIDIA GPU Computing Toolkit\CUDA\v11.4\libnvvp
+```
+
 ### OpenCV
 
+Go on this link and install it with the given executable.
+
 https://sourceforge.net/projects/opencvlibrary/files/opencv-win/3.3.0/
+
+> :warning: **Make sure to select an appropriate installation folder, we'll add it to the $PATH environment variable.**
+
+Paths to add:
+
+```
+...\OpenCV\build\include
+```
+
+```
+...\OpenCV\build\x64\vc14\lib
+```
 
 ### CUDNN
 
@@ -26,6 +60,14 @@ Pull the `darknet` submodule of this project by launching this command (at the r
 ```
 git submodule update --init darknet
 ```
+
+Then open the Visaul Studio Solution in `.\darknet\build\darknet\darknet.sln`.
+
+From now on, you'll have to build `darknet`.
+
+Like so:
+
+
 
 ## How to use it
 
