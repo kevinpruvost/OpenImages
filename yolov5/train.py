@@ -1,7 +1,8 @@
 # YOLOv5 🚀 by Ultralytics, GPL-3.0 license
 """
 Train a YOLOv5 model on a custom dataset
-
+python train.py --img 640  --batch 8 --epochs 300 --project runs/train/fold1 --data data/coco_fold1.yaml --weights models/yolov5s.pt --workers 2 --device cpu
+python.exe .\train.py --resume
 Usage:
     $ python path/to/train.py --data coco128.yaml --weights yolov5s.pt --img 640
 """
